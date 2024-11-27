@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "nrutil.h": "c",
+        "algorithm": "c"
+    }
+}
