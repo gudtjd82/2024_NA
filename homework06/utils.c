@@ -2,10 +2,9 @@
 #include <stdlib.h>
 #include "nrutil.h"
 
-int parsing_data(char* path, float*** input, float*** output)
+int parsing_data(char* path, float*** input, float*** output, int rows)
 {
     FILE *file;
-    int rows;
 
     file = fopen(path, "r");
     if (file == NULL)
@@ -13,8 +12,6 @@ int parsing_data(char* path, float*** input, float*** output)
         printf("Error: Could not open file\n");
         return -1;
     }
-
-    rows = 77;
 
     *input = matrix(1, rows, 1, 2);
     *output = matrix(1, rows, 1, 2);
